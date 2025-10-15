@@ -1,0 +1,64 @@
+[build-system]
+requires = ["hatchling>=1.25"]
+build-backend = "hatchling.build"
+
+[project]
+name = "mondeq-quant"
+version = "0.0.1"
+description = "MONDEQ experiments with quantisation, spectral diagnostics, and solver callbacks"
+readme = "README.md"
+requires-python = ">=3.11,<3.13"
+license = "MIT"
+authors = [{ name = "James Li" }]
+
+dependencies = [
+  "torch==2.8.0",
+  "numpy==2.3.*",
+  "scipy==1.16.2",
+  "matplotlib==3.10.6",
+  "hydra-core==1.3.2",
+  "omegaconf==2.3.0",
+  "tqdm==4.67.*",
+  "einops==0.8.1",
+]
+
+[project.optional-dependencies]
+vision = [
+  "torchvision==0.23.0",
+]
+dev = [
+  "pytest==8.4.2",
+  "mypy==1.18.1",
+  "ruff==0.14.0",
+  "types-tqdm",
+  "types-setuptools",
+]
+
+[tool.pytest.ini_options]
+addopts = "-q"
+testpaths = ["tests"]
+
+[tool.mypy]
+python_version = "3.11"
+strict = true
+ignore_missing_imports = true
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+lint.select = ["E","F","I","B","UP","SIM","PL","RUF"]
+
+[tool.hatch.build.targets.wheel]
+packages = ["mondeq"]
+
+[tool.hatch.build.targets.sdist]
+include = [
+  "mondeq",
+  "README.md",
+  "LICENSE",
+  "configs",
+  "experiments",
+  "scripts",
+  "tests",
+  "pyproject.toml",
+]
