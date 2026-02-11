@@ -4,25 +4,29 @@ build-backend = "hatchling.build"
 
 [project]
 name = "mondeq-quant"
-version = "0.0.1"
-description = "MONDEQ experiments with quantisation, spectral diagnostics, and solver callbacks"
+version = "0.0.2"
+description = "Fully-connected MON (Winston–Kolter style) with prox-based FB equilibrium and implicit backward; optional experiment extras."
 readme = "README.md"
 requires-python = ">=3.11,<3.13"
-license = "MIT"
+license = { text = "MIT" }
 authors = [{ name = "James Li" }]
 
+# Core runtime deps for the refactored package (no experiments).
 dependencies = [
   "torch==2.8.0",
-  "numpy==2.3.*",
-  "scipy==1.16.2",
-  "matplotlib==3.10.6",
-  "hydra-core==1.3.2",
-  "omegaconf==2.3.0",
-  "tqdm==4.67.*",
-  "einops==0.8.1",
 ]
 
 [project.optional-dependencies]
+# Keep plotting/sweeps/etc. here. Install with: pip install .[experiments]
+experiments = [
+  "numpy==2.3.*",
+  "scipy==1.16.2",
+  "matplotlib==3.10.6",
+  "tqdm==4.67.*",
+  "hydra-core==1.3.2",
+  "omegaconf==2.3.0",
+  "einops==0.8.1",
+]
 vision = [
   "torchvision==0.23.0",
 ]
@@ -33,6 +37,9 @@ dev = [
   "types-tqdm",
   "types-setuptools",
 ]
+
+[project.urls]
+Homepage = "https://github.com/JLi-Projects/mondeq-quant"
 
 [tool.pytest.ini_options]
 addopts = "-q"
@@ -54,11 +61,8 @@ packages = ["mondeq"]
 [tool.hatch.build.targets.sdist]
 include = [
   "mondeq",
+  "tests",
   "README.md",
   "LICENSE",
-  "configs",
-  "experiments",
-  "scripts",
-  "tests",
   "pyproject.toml",
 ]
