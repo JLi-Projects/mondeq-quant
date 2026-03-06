@@ -1,0 +1,12 @@
+__pycache__/
+*.pyc
+*.egg-info/
+dist/
+build/
+.venv/
+venv/
+data/
+.pytest_cache/
+*.pt
+!checkpoints/mnist_mondeq_float.pt
+results/

@@ -1,0 +1,190 @@
+{
+  "timestamp": "2026-02-02T02:54:10.234981",
+  "seed": 42,
+  "float_accuracy": 98.22,
+  "model_stats": {
+    "m": 0.22688673436641693,
+    "m_computed": 0.2268889844417572,
+    "L": 1.8452754020690918,
+    "condition_number": 8.133024644310028
+  },
+  "quantisation_results": {
+    "4": {
+      "converges": false,
+      "quant_stats": {
+        "bits": 4,
+        "m_original": 0.22688673436641693,
+        "m_tilde": -0.14234218001365662,
+        "L_tilde": 1.919586420059204,
+        "delta_W_norm": 0.6038440465927124,
+        "relative_error": 0.35193311631720986,
+        "converges": false,
+        "convergence_margin": -0.37695731222629547
+      }
+    },
+    "6": {
+      "float_accuracy": 98.22,
+      "quant_accuracy": 98.18,
+      "accuracy_drop": 0.03999999999999204,
+      "quant_stats": {
+        "bits": 6,
+        "m_original": 0.22688673436641693,
+        "m_tilde": 0.13762237131595612,
+        "L_tilde": 1.8453564643859863,
+        "delta_W_norm": 0.13744762539863586,
+        "relative_error": 0.08010739098926507,
+        "converges": true,
+        "convergence_margin": 0.08943910896778107
+      },
+      "displacement": {
+        "empirical_mean": 4.68245157445781,
+        "empirical_max": 50.36701583862305,
+        "theoretical_mean": 23.258405694056286,
+        "theoretical_max": 51.97659122929034,
+        "ratio_mean": 0.20543040172533383,
+        "ratio_max": 1.6345449083197343,
+        "all_satisfied": false,
+        "fraction_satisfied": 0.99140625
+      }
+    },
+    "8": {
+      "float_accuracy": 98.22,
+      "quant_accuracy": 98.24,
+      "accuracy_drop": -0.01999999999999602,
+      "quant_stats": {
+        "bits": 8,
+        "m_original": 0.22688673436641693,
+        "m_tilde": 0.2074519693851471,
+        "L_tilde": 1.8450875282287598,
+        "delta_W_norm": 0.03466923534870148,
+        "relative_error": 0.020205965605607636,
+        "converges": true,
+        "convergence_margin": 0.19221749901771545
+      },
+      "displacement": {
+        "empirical_mean": 1.7183150273398495,
+        "empirical_max": 25.266613006591797,
+        "theoretical_mean": 5.896046525730657,
+        "theoretical_max": 13.246720664360215,
+        "ratio_mean": 0.30369298876096185,
+        "ratio_max": 5.726065875609542,
+        "all_satisfied": false,
+        "fraction_satisfied": 0.933984375
+      },
+      "gradient": {
+        "backward_converges": false,
+        "grad_norm_float_mean": 0.33510662109724115,
+        "grad_norm_quant_mean": 0.20908051682636142,
+        "grad_error_mean": 0.06670734076760709,
+        "grad_error_max": 0.1307077556848526,
+        "grad_error_ratio": 1.9241076446211725
+      }
+    },
+    "12": {
+      "float_accuracy": 98.22,
+      "quant_accuracy": 98.22,
+      "accuracy_drop": 0.0,
+      "quant_stats": {
+        "bits": 12,
+        "m_original": 0.22688673436641693,
+        "m_tilde": 0.2255944162607193,
+        "L_tilde": 1.8452372550964355,
+        "delta_W_norm": 0.00211244891397655,
+        "relative_error": 0.0012311800266172322,
+        "converges": true,
+        "convergence_margin": 0.22477428545244038
+      },
+      "displacement": {
+        "empirical_mean": 0.13005192988566705,
+        "empirical_max": 3.104188919067383,
+        "theoretical_mean": 0.35878340225699307,
+        "theoretical_max": 0.8100208747873718,
+        "ratio_mean": 0.37471819721549376,
+        "ratio_max": 7.756040485982037,
+        "all_satisfied": false,
+        "fraction_satisfied": 0.91484375
+      },
+      "gradient": {
+        "backward_converges": false,
+        "grad_norm_float_mean": 0.33510662109724115,
+        "grad_norm_quant_mean": 0.19722924241796136,
+        "grad_error_mean": 0.004923299442452844,
+        "grad_error_max": 0.00963196624070406,
+        "grad_error_ratio": 2.330612309665301
+      }
+    },
+    "16": {
+      "float_accuracy": 98.22,
+      "quant_accuracy": 98.22,
+      "accuracy_drop": 0.0,
+      "quant_stats": {
+        "bits": 16,
+        "m_original": 0.22688673436641693,
+        "m_tilde": 0.22681404650211334,
+        "L_tilde": 1.8452686071395874,
+        "delta_W_norm": 0.00012846669415012002,
+        "relative_error": 7.487311379541761e-05,
+        "converges": true,
+        "convergence_margin": 0.2267582676722668
+      },
+      "displacement": {
+        "empirical_mean": 0.007879593221696268,
+        "empirical_max": 0.19006815552711487,
+        "theoretical_mean": 0.02182022348453536,
+        "theoretical_max": 0.04926163351282197,
+        "ratio_mean": 0.3795597660166701,
+        "ratio_max": 10.70806986197411,
+        "all_satisfied": false,
+        "fraction_satisfied": 0.912890625
+      },
+      "gradient": {
+        "backward_converges": false,
+        "grad_norm_float_mean": 0.33510662109724115,
+        "grad_norm_quant_mean": 0.19774963101372123,
+        "grad_error_mean": 0.00017920047935149341,
+        "grad_error_max": 0.00035113023477606475,
+        "grad_error_ratio": 1.3949178075843403
+      }
+    },
+    "32": {
+      "float_accuracy": 98.22,
+      "quant_accuracy": 98.22,
+      "accuracy_drop": 0.0,
+      "quant_stats": {
+        "bits": 32,
+        "m_original": 0.22688673436641693,
+        "m_tilde": 0.22688882052898407,
+        "L_tilde": 1.8452731370925903,
+        "delta_W_norm": 4.473090697842963e-08,
+        "relative_error": 2.607012121332051e-08,
+        "converges": true,
+        "convergence_margin": 0.22688668963550995
+      },
+      "displacement": {
+        "empirical_mean": 7.98034585705043e-06,
+        "empirical_max": 0.0002712807909119874,
+        "theoretical_mean": 7.597598684395095e-06,
+        "theoretical_max": 1.715225568827264e-05,
+        "ratio_mean": 1.0910970120598336,
+        "ratio_max": 32.947415915730794,
+        "all_satisfied": false,
+        "fraction_satisfied": 0.764453125
+      },
+      "gradient": {
+        "backward_converges": false,
+        "grad_norm_float_mean": 0.33510662109724115,
+        "grad_norm_quant_mean": 0.19768457440659404,
+        "grad_error_mean": 2.3532686865834762e-07,
+        "grad_error_max": 4.6047117052694375e-07,
+        "grad_error_ratio": 5.2609456090802755
+      }
+    }
+  },
+  "verification": {
+    "float_accuracy_above_97": true,
+    "8bit_drop_below_1": true,
+    "forward_converges": true,
+    "backward_converges": false,
+    "gradient_scales_correctly": true
+  }
+}
